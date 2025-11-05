@@ -1,0 +1,6 @@
+# Ignore system-specific or generated files
+*.log
+*.cache
+*.bak
+.DS_Store
+*~

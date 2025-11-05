@@ -1,0 +1,200 @@
+* {
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+    transition: background-color 0.5s;
+}
+
+button {
+    border: none;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+button:hover {
+    box-shadow: inset 0 -2px currentColor;
+}
+
+/* Generic module styling */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd,
+#language,
+#keyboard-state {
+    padding: 2px 10px;
+    background: transparent;
+    border-color: #90b1b1;
+    color: #90b1b1;
+}
+
+/* Individual modules all use the same base color */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#language,
+#keyboard-state {
+    border-color: #90b1b1;
+    color: #90b1b1;
+}
+
+/* State-based overrides */
+#battery.charging,
+#battery.plugged {
+    border-color: #26A65B;
+    color: #26A65B;
+}
+
+#battery.critical:not(.charging) {
+    border-color: #f53c3c;
+    color: #f53c3c;
+}
+
+#network.disconnected {
+    border-color: #f53c3c;
+    color: #f53c3c;
+}
+
+#pulseaudio.muted,
+#wireplumber.muted,
+#mpd.stopped {
+    border-color: #555;
+    color: #555;
+}
+
+#temperature.critical {
+    border-color: #eb4d4b;
+    color: #eb4d4b;
+}
+
+#power-profiles-daemon.performance {
+    border-color: #f53c3c;
+    color: #f53c3c;
+}
+
+#power-profiles-daemon.balanced {
+    border-color: #2980b9;
+    color: #2980b9;
+}
+
+#power-profiles-daemon.power-saver {
+    border-color: #2ecc71;
+    color: #2ecc71;
+}
+
+#idle_inhibitor {
+    border-color: #555;
+    color: #555;
+}
+
+#idle_inhibitor.activated {
+    border-color: #ecf0f1;
+    color: #ecf0f1;
+}
+
+/* MPD states */
+#mpd {
+    border-color: #90b1b1;
+    color: #90b1b1;
+}
+
+#mpd.disconnected {
+    border-color: #f53c3c;
+    color: #f53c3c;
+}
+
+#mpd.paused {
+    border-color: #51a37a;
+    color: #51a37a;
+}
+
+/* Scratchpad and privacy */
+#scratchpad {
+    border-color: rgba(200, 200, 200, 0.3);
+    color: rgba(200, 200, 200, 0.6);
+}
+
+#privacy-item.screenshare {
+    border-color: #cf5700;
+    color: #cf5700;
+}
+
+#privacy-item.audio-in {
+    border-color: #1ca000;
+    color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    border-color: #0069d4;
+    color: #0069d4;
+}
+
+/* Power button (no border, neutral base, white on hover) */
+#custom-power {
+    font-size: 30px;
+    color: #90b1b1;
+    margin-right: 8px;
+    margin-left: 4px;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+#custom-power:hover {
+    color: #ffffff;
+}
+
+/* Add spacing between icon and text */
+.modules-right label,
+
+
+/* Or target icons specifically */
+label > span:first-child {
+    margin-right: 6px; /* space between icon and text */
+}
+
+#custom-arch {
+  font-size: 20px;  /* ← increase this for bigger logo */
+  color: #1793d1;   /* Arch blue */
+  padding: 0 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+#workspaces button.active {
+    color: #00ff7f;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ff7f;
+    border: none;
+}
+
+#workspace button.hover {
+	border: none;
+}
+
